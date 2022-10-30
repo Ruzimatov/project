@@ -1,0 +1,44 @@
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+main{
+    min-height: calc(100vh - 104px - 64px);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(280px,1fr));
+    padding: 10px;
+    gap: 10px;
+}
+
+.card-img{
+    height: 200px;
+}
+.cardimg img{
+    object-fit: cover;
+}
+.card-title{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 20px;
+    line-height: 1;
+}
+.card-text{
+    height: 90px;
+}
+
+.card-text{
+    padding: 0;
+    list-style-type: none;
+}
