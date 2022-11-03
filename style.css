@@ -42,3 +42,75 @@ main{
     padding: 0;
     list-style-type: none;
 }
+/* ========Loader=====*/
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 100%;
+  }
+  
+  .loader:before , .loader:after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  }
+  .loader:after {
+    box-shadow: 0 2px 0 #FF3D00 inset;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {  transform: rotate(0)}
+    100% { transform: rotate(360deg)}
+  }
+
+  .modal-container{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content{
+    max-width: 1000px;
+    min-height: 450px;
+    background-color: #fff;
+    position: absolute;
+  }
+
+  .modal-wrapper{
+    display: flex;
+    padding: 15px;
+  }
+
+  .modal-img{
+    overflow:hidden;
+    width: 450px;
+    height: 250px;
+    border-radius: 15px;
+    margin-right: 15px;
+  }
+  .modal-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .modal-info{
+    padding-left: 15px;
+  }
+
+  .about{
+    list-style-type: none;
+    padding: 0;
+  }
